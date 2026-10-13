@@ -25,7 +25,7 @@ pub use bevy_replicon::prelude::Remote as Replicated;
 ///
 /// Removing this component ends the receiver's current replication epoch and cleans up received
 /// entities unless they are marked [`Persistent`].
-#[derive(Component, Default)]
+#[derive(Component, Default, Clone, Copy)]
 pub struct ReplicationReceiver;
 
 /// Prevents receiver-side entities from being despawned when the connection ends or their

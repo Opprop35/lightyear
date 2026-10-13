@@ -24,7 +24,7 @@ pub enum ConnectionError {
 }
 
 /// Marker component to identify this entity as a Client
-#[derive(Component, Default, Reflect)]
+#[derive(Component, Default, Clone, Copy, Reflect)]
 pub struct Client;
 
 /// Trigger to connect the client

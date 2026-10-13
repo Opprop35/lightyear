@@ -123,7 +123,7 @@ impl ReplicationMode {
 ///     commands.entity(trigger.entity).insert(ReplicationSender);
 /// }
 /// ```
-#[derive(Component, Default)]
+#[derive(Component, Default, Clone, Copy)]
 pub struct ReplicationSender;
 
 /// Selects which peers an entity is replicated to.

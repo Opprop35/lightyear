@@ -31,7 +31,7 @@ use tracing::{trace, warn};
 /// child links when the server disconnects.
 /// The target collection uses `linked_spawn`, so spawning a link with [`LinkOf`] can establish
 /// the relationship at spawn time.
-#[derive(Component, Default, Debug, Reflect)]
+#[derive(Component, Default, Clone, Debug, Reflect)]
 #[component(on_add = Server::on_add)]
 #[relationship_target(relationship = LinkOf, linked_spawn)]
 pub struct Server {
